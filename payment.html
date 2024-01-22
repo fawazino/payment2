@@ -48,7 +48,8 @@ h3 {
     <div>
 Enter 1 for 24/19% <br>
 Enter 2 for 19/14% <br>
-Enter  3 for 15% <br>
+Enter 3 for 19/15% <br>
+Enter  4 for 15% <br>
 
 <input type="number" id="selec" onfocus="this.value=' ' "> <br><br>
 
@@ -113,7 +114,21 @@ else if (x === 2){
   
 }
 
-else if (x === 3){
+  else if (x === 3){
+    if(gha === 0 || gha <= 500 || gha === ""){
+  document.getElementById("result").innerHTML = total - (total*(15/100));
+        document.getElementById("gg").innerHTML=" "
+    }
+ else {
+    const r = (((total - gha) - ((total - gha) * (15/100))) + (gha - (gha *(19/100))));
+    document.getElementById("gg").innerHTML = (gha - (gha * (19/100)))
+    document.getElementById("result").innerHTML = r;
+
+ }
+  
+}
+
+else if (x === 4){
   document.getElementById("result").innerHTML = total - (total*(15/100));}
 
 else {
